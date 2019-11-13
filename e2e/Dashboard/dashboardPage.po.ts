@@ -1,14 +1,13 @@
 import { browser, by, element, ElementFinder } from 'protractor';
 import { relative } from 'path';
 
-export class Page {
+export class DashboardPage {
   // Elements
 
-  public dashboardBtn(): ElementFinder {
-    return element(by.xpath('//*[@id="main-body"]/div[3]/div[2]/div[1]/div[2]/div[1]/a'));
+  public toolQaLogo(): ElementFinder {
+    return element(by.xpath('//*[@id="logo-events"]/a'));
   }
 
- 
 
   // Actions
 
