@@ -10,23 +10,14 @@ describe('Dashboard Page', () => {
     await app.dashboard.navigateTo();
   });
 // only navigates
-  fit('Only navigates', async () => {
+  it('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
     await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.toolQaLogo())));
-    
     await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.id)));
     await(app.dashboard.id.click());
-    
     await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.username)));
     await(app.dashboard.username.click());
-
     await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.pw)));
     await(app.dashboard.pw.click());
-
-    // await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.droppable)));
-    // await(app.dashboard.droppable.click());
-
-    // await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.draggable)));
-    // await(app.dashboard.draggable.click());
   });
 });
