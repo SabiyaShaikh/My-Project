@@ -31,22 +31,22 @@ describe('login Page', () => {
 
   // });
 
-  fit('Only navigates', async () => {
-    await browser.waitForAngularEnabled(false);
+//   it('Only navigates', async () => {
+//     await browser.waitForAngularEnabled(false);
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
-    await(app.login.tenantID.sendkeys('abc'));
+//     await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
+//     await(app.login.tenantID.sendkeys('abc'));
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
-    app.login.username.sendKeys('myemail@myemail.com');
+//     await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
+//     await(app.login.username.sendKeys('myemail@myemail.com'));
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.password)));
-    app.login.password.clicksendKeys('mypassword');
+//     await(browser.wait(ExpectedConditions.visibilityOf(app.login.password)));
+//     await(app.login.password.clicksendKeys('mypassword'));
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
-    await(app.login.loginBtn.click());
+//     await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
+//     await(app.login.loginBtn.click());
 
 
   });
 
-});
+// });

@@ -8,21 +8,21 @@ export class DashboardPage {
     return element(by.xpath('//*[@id="logo-events"]/a'));
   }
 
-  public get sortable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[1]/a'));
+  public get id(): ElementFinder {
+    return element(by.xpath('//*[@id="mat-input-4"]'));
   }
-  public get selectable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[2]/a'));
+  public get username(): ElementFinder {
+    return element(by.xpath('//*[@id="mat-input-0"]'));
   }
-  public get resizable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[3]/a'));
+  public get pw(): ElementFinder {
+    return element(by.xpath('//*[@id="mat-input-1"]'));
   }
-  public get droppable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[4]/a'));
-  }
-  public get draggable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[5]/a'));
-  }
+  // public get loginbtn(): ElementFinder {
+  //   return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[4]/a'));
+  // }
+  // public get draggable(): ElementFinder {
+  //   return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[5]/a'));
+  // }
 
 
   // Actions

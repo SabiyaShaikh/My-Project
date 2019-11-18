@@ -9,7 +9,7 @@ export class LoginPage {
   }
 
   public get tenantID(): ElementFinder {
-    return element(by.xpath('//*[@id="mat-input-4"]'));
+    return element(by.xpath('//*[@id="mat-form-field-label-9"]/span[1]"]')); 
   }
   public get username(): ElementFinder {
     return element(by.xpath('//*[@id="mat-input-0"]'));

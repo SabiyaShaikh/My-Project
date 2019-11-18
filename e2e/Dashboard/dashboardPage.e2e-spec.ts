@@ -10,22 +10,23 @@ describe('Dashboard Page', () => {
     await app.dashboard.navigateTo();
   });
 // only navigates
-  it('Only navigates', async () => {
+  fit('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
     await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.toolQaLogo())));
-    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.sortable)));
-    await(app.dashboard.sortable.click());
     
-    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.selectable)));
-    await(app.dashboard.selectable.click());
+    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.id)));
+    await(app.dashboard.id.click());
+    
+    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.username)));
+    await(app.dashboard.username.click());
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.resizable)));
-    await(app.dashboard.resizable.click());
+    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.pw)));
+    await(app.dashboard.pw.click());
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.droppable)));
-    await(app.dashboard.droppable.click());
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.droppable)));
+    // await(app.dashboard.droppable.click());
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.draggable)));
-    await(app.dashboard.draggable.click());
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.dashboard.draggable)));
+    // await(app.dashboard.draggable.click());
   });
 });
