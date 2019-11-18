@@ -17,7 +17,7 @@ exports.config = {
   },
   directConnect: true,
   port: null,
-  baseUrl: 'https://demoqa.com/',
+  baseUrl: 'http://loxodo.tech/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
