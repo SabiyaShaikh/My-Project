@@ -1,6 +1,7 @@
 import { AppPage } from '../app.po';
-import { browser, ExpectedConditions } from 'protractor';
+import { browser, ExpectedConditions, Ptor } from 'protractor';
 import { async } from 'q';
+import { element } from '@angular/core/src/render3';
 
 describe('login Page', () => {
   let app = new AppPage();
@@ -8,19 +9,44 @@ describe('login Page', () => {
   beforeEach(async () => {
     app = new AppPage();
     await app.login.navigateTo();
+    
+
+
   });
 // only navigates
-  it('Only navigates', async () => {
-    await browser.waitForAngularEnabled(false);
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.toolQaLogo())));
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.sortable)));
-    await(app.login.sortable.click());
-    
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.selectable)));
-    await(app.login.selectable.click());
+  // it('Only navigates', async () => {
+    // await browser.waitForAngularEnabled(false);
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.resizable)));
-    await(app.login.resizable.click());
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.login.loxodoLogo())));
+
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
+    
+
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
+
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.login.password)));
+
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
+
+
+  // });
+
+  fit('Only navigates', async () => {
+    await browser.waitForAngularEnabled(false);
+
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
+    await(app.login.tenantID.sendkeys('abc'));
+
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
+    app.login.username.sendKeys('myemail@myemail.com');
+
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.password)));
+    app.login.password.clicksendKeys('mypassword');
+
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
+    await(app.login.loginBtn.click());
+
 
   });
+
 });
