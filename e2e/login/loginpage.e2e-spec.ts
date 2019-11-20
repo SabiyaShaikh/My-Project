@@ -1,7 +1,6 @@
 import { AppPage } from '../app.po';
 import { browser, ExpectedConditions, Ptor } from 'protractor';
-import { async } from 'q';
-import { element } from '@angular/core/src/render3';
+
 
 describe('login Page', () => {
   let app = new AppPage();
