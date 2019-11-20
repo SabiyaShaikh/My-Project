@@ -14,17 +14,17 @@ describe('login Page', () => {
 
   });
 // only navigates
-  // fit('Only navigates', async () => {
-  //   await browser.waitForAngularEnabled(false);
+  fit('Only navigates', async () => {
+    await browser.waitForAngularEnabled(false);
 
-  //   await(browser.wait(ExpectedConditions.visibilityOf(app.login.loxodoLogo())));
-  //   await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
-  //   await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
-  //   await(browser.wait(ExpectedConditions.visibilityOf(app.login.password)));
-  //   await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.loxodoLogo())));
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.password)));
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
 
 
-  // });
+  });
 
   it('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
