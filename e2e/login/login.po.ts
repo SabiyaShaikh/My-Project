@@ -8,9 +8,9 @@ export class LoginPage {
     return element(by.xpath('/html/body/div[2]/div/div[1]/div/h2/a/img'));
   }
 
-  public get tenantID(): ElementFinder {
-    return element(by.xpath('//*[@id="mat-form-field-label-9"]/span[1]"]')); 
-  }
+  // public get tenantID(): ElementFinder {
+  //   return element(by.xpath('//*[@id="mat-input-4"]')); 
+  // }
   public get username(): ElementFinder {
     return element(by.xpath('//*[@id="mat-input-0"]'));
   }

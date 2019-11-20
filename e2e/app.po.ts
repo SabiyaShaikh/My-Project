@@ -1,9 +1,10 @@
 
-import { DashboardPage } from './Dashboard/dashboardPage.po';
 import { LoginPage } from './login/login.po' ;
+import { AdminLogin} from './AdminLogin/adminlogin.po' ;
+
 export class AppPage {
 
-  public dashboard = new DashboardPage();
   public login = new LoginPage();
+  public adminlogin = new AdminLogin();
 
 }

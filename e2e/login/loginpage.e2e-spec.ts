@@ -28,8 +28,8 @@ describe('login Page', () => {
   it('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
 
-    await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
-    await(app.login.tenantID.sendkeys('TC5'));
+    // await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
+    // await(app.login.tenantID.sendkeys('TC5'));
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
     await(app.login.username.sendKeys('t3@tc.com'));
