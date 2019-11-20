@@ -13,7 +13,7 @@ describe('login Page', () => {
 
   });
 // only navigates
-  fit('Only navigates', async () => {
+  it('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.login.loxodoLogo())));
