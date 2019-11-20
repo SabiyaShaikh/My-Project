@@ -31,9 +31,12 @@ describe('Admin login', () => {
     await(app.adminlogin.adminBtn.click());
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.Ausername)));
+    await(app.adminlogin.Ausername.click());
     await(app.adminlogin.Ausername.sendKeys('curtis.fry@nbs-us.com'));
 
+
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.Apassword)));
+    await(app.adminlogin.Apassword.click());
     await(app.adminlogin.Apassword.sendKeys('Navigator1'));
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.AloginBtn)));

@@ -12,10 +12,10 @@ export class AdminLogin {
     return element(by.id('mat-input-2'));
   }
   public get Apassword(): ElementFinder {
-    return element(by.xpath('mat-input-3"]'));
+    return element(by.id('mat-input-3'));
   }
   public get AloginBtn(): ElementFinder {
-    return element(by.xpath('//*[@id="mat-tab-content-0-1"]/div/app-default-login-form/form/div[3]/button'));
+    return element(by.className('btn btn-rounded btn-md btn-primary ml-2 text-uppercase fw-600 ripple animated fadeInLeft'));
   }
   
 
