@@ -4,30 +4,27 @@ import { relative } from 'path';
 export class LoginPage {
   // Elements
 
-  public toolQaLogo(): ElementFinder {
-    return element(by.xpath('//*[@id="logo-events"]/a'));
+  public loxodoLogo(): ElementFinder {
+    return element(by.xpath('/html/body/div[2]/div/div[1]/div/h2/a/img'));
   }
 
-  public get sortable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[1]/a'));
+  public get tenantID(): ElementFinder {
+    return element(by.id('mat-input-4')); 
   }
-  public get selectable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[2]/a'));
+  public get username(): ElementFinder {
+    return element(by.id('mat-input-0'));
   }
-  public get resizable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[3]/a'));
+  public get password(): ElementFinder {
+    return element(by.id('mat-input-1'));
   }
-  public get droppable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[4]/a'));
+  public get loginBtn(): ElementFinder {
+    return element(by.xpath('//*[@id="mat-tab-content-0-0"]/div/app-tenant-login-form/form/div[4]/div/button'));
   }
-  public get draggable(): ElementFinder {
-    return element(by.xpath('//*[@id="sidebar"]/aside[1]/ul/li[5]/a'));
-  }
-
+  
 
   // Actions
 
   public async navigateTo(): Promise<any> {
-    return browser.get('/#');
+    return browser.get('/login');
   }
 }
