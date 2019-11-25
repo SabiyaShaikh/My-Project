@@ -5,11 +5,11 @@ export class LoginPage {
   // Elements
 
   public loxodoLogo(): ElementFinder {
-    return element(by.xpath('/html/body/div[2]/div/div[1]/div/h2/a/img'));
+    return element(by.className('logo-login animated fadeInDown'));
   }
 
   public get tenantID(): ElementFinder {
-    return element(by.id('mat-input-4')); 
+    return element(by.className('form-controlX mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-invalid')); 
   }
   public get username(): ElementFinder {
     return element(by.id('mat-input-0'));
@@ -18,7 +18,7 @@ export class LoginPage {
     return element(by.id('mat-input-1'));
   }
   public get loginBtn(): ElementFinder {
-    return element(by.xpath('//*[@id="mat-tab-content-0-0"]/div/app-tenant-login-form/form/div[4]/div/button'));
+    return element(by.className('btn btn-rounded btn-md btn-primary ml-2 text-uppercase fw-600 ripple animated fadeInLeft'));
   }
   
 

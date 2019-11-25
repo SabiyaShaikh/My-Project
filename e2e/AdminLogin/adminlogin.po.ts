@@ -25,3 +25,4 @@ export class AdminLogin {
     return browser.get('/login');
   }
 }
+

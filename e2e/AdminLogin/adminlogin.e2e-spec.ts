@@ -8,10 +8,16 @@ describe('Admin login', () => {
   beforeEach(async () => {
     app = new AppPage();
     await app.login.navigateTo();
-    
-
-
   });
+
+  afterEach(async () => {
+    app = new AppPage();
+    await app.dashboardpage.navigateTo();
+  
+  });
+
+
+
 // only navigates
   it('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
@@ -23,8 +29,8 @@ describe('Admin login', () => {
 
 
   });
-
-  fit('Only navigates', async () => {
+  
+    fit('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.adminBtn)));
@@ -41,8 +47,12 @@ describe('Admin login', () => {
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.AloginBtn)));
     await(app.adminlogin.AloginBtn.click());
+    browser.pause();
+
+    
 
 
   });
 
 });
+
