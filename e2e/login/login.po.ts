@@ -9,7 +9,7 @@ export class LoginPage {
   }
 
   public get tenantID(): ElementFinder {
-    return element(by.className('form-controlX mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-invalid')); 
+    return element(by.css('input[name="tenant"]')); 
   }
   public get username(): ElementFinder {
     return element(by.id('mat-input-0'));
@@ -21,10 +21,24 @@ export class LoginPage {
     return element(by.className('btn btn-rounded btn-md btn-primary ml-2 text-uppercase fw-600 ripple animated fadeInLeft'));
   }
   
+  public get ItemM(): ElementFinder {
+    return element(by.className('list-unstyled sub-menu collapse'));
+  }
 
+  public get Items(): ElementFinder {
+    return element(by.linkText('Items'));
+  }
+
+  public get Inventory(): ElementFinder {
+    return element(by.linkText('Inventory'));
+  }
+
+ 
   // Actions
 
   public async navigateTo(): Promise<any> {
     return browser.get('/login');
+
+  
   }
 }

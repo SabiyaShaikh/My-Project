@@ -8,7 +8,9 @@ describe('login Page', () => {
   beforeEach(async () => {
     app = new AppPage();
     await app.login.navigateTo();
-    
+
+
+  
 
 
   });
@@ -25,12 +27,12 @@ describe('login Page', () => {
 
   });
 
-  it('Only navigates', async () => {
+  fit('Verify login using vaid credential', async () => {
     await browser.waitForAngularEnabled(false);
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.login.tenantID)));
     await(app.login.tenantID.click());
-    await(app.login.tenantID.sendkeys('TC5'));
+    await(app.login.tenantID.sendKeys('TC5'));
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.login.username)));
     await(app.login.username.click());
@@ -43,7 +45,21 @@ describe('login Page', () => {
     await(browser.wait(ExpectedConditions.visibilityOf(app.login.loginBtn)));
     await(app.login.loginBtn.click());
 
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.ItemM)));
+    await(app.login.ItemM.click());
 
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.Items)));
+    await(app.login.Items.click());
+
+    await(browser.wait(ExpectedConditions.visibilityOf(app.login.Inventory)));
+    await(app.login.Inventory.click());
+
+    
   });
 
+  //   afterEach(async () => {
+  //   app = new AppPage();
+  //   await app.dashboardpage.navigateTo();
+  
+  // });
 });

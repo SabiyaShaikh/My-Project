@@ -10,11 +10,7 @@ describe('Admin login', () => {
     await app.login.navigateTo();
   });
 
-  afterEach(async () => {
-    app = new AppPage();
-    await app.dashboardpage.navigateTo();
-  
-  });
+ 
 
 
 
@@ -30,7 +26,7 @@ describe('Admin login', () => {
 
   });
   
-    fit('Only navigates', async () => {
+    it('Only navigates', async () => {
     await browser.waitForAngularEnabled(false);
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.adminBtn)));
@@ -47,12 +43,22 @@ describe('Admin login', () => {
 
     await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.AloginBtn)));
     await(app.adminlogin.AloginBtn.click());
-    browser.pause();
+  
+    await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.dropdown)));
+    await(app.adminlogin.dropdown.click());
 
-    
+    await(browser.wait(ExpectedConditions.visibilityOf(app.adminlogin.AlogoutBtn)));
+    await(app.adminlogin.AlogoutBtn.click());
 
-
+  
   });
+
+
+  // afterEach(async () => {
+  //   app = new AppPage();
+  //   await app.dashboardpage.navigateTo();
+  
+  // });
 
 });
 

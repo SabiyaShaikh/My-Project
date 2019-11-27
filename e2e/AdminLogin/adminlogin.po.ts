@@ -17,6 +17,16 @@ export class AdminLogin {
   public get AloginBtn(): ElementFinder {
     return element(by.className('btn btn-rounded btn-md btn-primary ml-2 text-uppercase fw-600 ripple animated fadeInLeft'));
   }
+
+  public get dropdown(): ElementFinder {
+    return element(by.className('fs-12 mt10 mat-icon notranslate material-icons mat-icon-no-color'));
+  }
+  public get AlogoutBtn(): ElementFinder {
+    return element(by.xpath('/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[3]'));
+  }
+
+
+
   
 
   // Actions

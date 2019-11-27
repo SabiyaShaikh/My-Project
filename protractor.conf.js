@@ -8,11 +8,12 @@ exports.config = {
   restartBrowserBetweenTests: true,
   specs: [
     './e2e/**/*.e2e-spec.ts'
+    
   ],
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-        args: ["disable-infobars", "--start-maximized", "--window-size=1630,963"]
+        args: ["disable-infobars", "--start-maximized", "--window-size=1366, 728"]
     }
   },
   directConnect: true,
@@ -33,4 +34,6 @@ exports.config = {
     browser.waitForAngularEnabled(false)
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
       }
+
+
 };
