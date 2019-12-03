@@ -18,7 +18,7 @@ exports.config = {
   },
   directConnect: true,
   port: null,
-  baseUrl: 'http://loxodo.tech/',
+  baseUrl: 'http://loxodo.app/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
