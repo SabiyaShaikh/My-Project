@@ -1,8 +1,8 @@
-import { AppPage } from '../app.po';
+import { AppPage } from '../../app.po';
 import { browser, ExpectedConditions, Ptor } from 'protractor';
 import { async } from 'q';
 
-fdescribe('Admin Dashboard', () => {
+describe('Admin Dashboard', () => {
 let app = new AppPage();
 
         beforeEach(async () => {

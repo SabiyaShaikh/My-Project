@@ -6,6 +6,7 @@ import { AdminLogin } from './Admin/AdminLogin/adminlogin.po' ;
 import { DashboardPage } from './Admin/DashboardPage/dashboardpage.po';
 import { userDashboard} from './User/userDashboard/userdashboard.po';
 import { LogOut } from './LogOut/logout.po';
+import { ItemManagement } from './User/ItemManagement/itemManagement.po';
 
 
 
@@ -34,6 +35,8 @@ export class AppPage {
   public adminlogin = new AdminLogin();
   public dashboardpage = new DashboardPage();
   public userdashboard = new userDashboard();
+  public ItemManagement = new ItemManagement();
+
 
   public logout = new LogOut();
   // public productionpage = new DashboardPage();
